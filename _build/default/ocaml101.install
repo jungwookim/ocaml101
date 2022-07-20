@@ -1,8 +1,0 @@
-lib: [
-  "_build/install/default/lib/ocaml101/META"
-  "_build/install/default/lib/ocaml101/dune-package"
-  "_build/install/default/lib/ocaml101/opam"
-]
-bin: [
-  "_build/install/default/bin/ocaml101"
-]

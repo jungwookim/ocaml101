@@ -1,10 +1,10 @@
-# dune exec ocaml101
+# dune runtest
 # OCAMLPARAM: unset
 # Workspace root: /Users/jungwookim/Documents/GitHub/ocaml101
-$ /opt/homebrew/bin/nproc > /var/folders/s6/l1p_l9z50_g45bc3tfp3lrdr0000gn/T/duneebb72a.output 2> /dev/null
+$ /opt/homebrew/bin/nproc > /var/folders/s6/l1p_l9z50_g45bc3tfp3lrdr0000gn/T/dunefd7b71.output 2> /dev/null
 # Auto-detected concurrency: 8
 # disable binary cache
-$ /Users/jungwookim/.opam/4.11.1/bin/ocamlc.opt -config > /var/folders/s6/l1p_l9z50_g45bc3tfp3lrdr0000gn/T/duneaab5f4.output
+$ /Users/jungwookim/.opam/4.11.1/bin/ocamlc.opt -config > /var/folders/s6/l1p_l9z50_g45bc3tfp3lrdr0000gn/T/dune10b2a9.output
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
@@ -109,4 +109,15 @@ $ /Users/jungwookim/.opam/4.11.1/bin/ocamlc.opt -config > /var/folders/s6/l1p_l9
 #      ; windows_unicode = false
 #      }
 #  }
-# Workspace root: /Users/jungwookim/Documents/GitHub/ocaml101
+$ (cd _build/default && /Users/jungwookim/.opam/4.11.1/bin/ocamldep.opt -modules -impl exercism/ocaml/leap/test.ml) > _build/default/exercism/ocaml/leap/.test.eobjs/test.ml.d
+$ (cd _build/default && /Users/jungwookim/.opam/4.11.1/bin/ocamldep.opt -modules -impl exercism/ocaml/leap/leap.ml) > _build/default/exercism/ocaml/leap/.test.eobjs/leap.ml.d
+$ (cd _build/default && /Users/jungwookim/.opam/4.11.1/bin/ocamldep.opt -modules -intf exercism/ocaml/leap/leap.mli) > _build/default/exercism/ocaml/leap/.test.eobjs/leap.mli.d
+$ (cd _build/default && /Users/jungwookim/.opam/4.11.1/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -bin-annot -I exercism/ocaml/leap/.test.eobjs/byte -I /Users/jungwookim/.opam/4.11.1/lib/base -I /Users/jungwookim/.opam/4.11.1/lib/base/base_internalhash_types -I /Users/jungwookim/.opam/4.11.1/lib/base/caml -I /Users/jungwookim/.opam/4.11.1/lib/base/shadow_stdlib -I /Users/jungwookim/.opam/4.11.1/lib/bytes -I /Users/jungwookim/.opam/4.11.1/lib/oUnit -I /Users/jungwookim/.opam/4.11.1/lib/ounit2 -I /Users/jungwookim/.opam/4.11.1/lib/ounit2/advanced -I /Users/jungwookim/.opam/4.11.1/lib/sexplib0 -I /Users/jungwookim/.opam/4.11.1/lib/stdlib-shims -no-alias-deps -opaque -o exercism/ocaml/leap/.test.eobjs/byte/leap.cmi -c -intf exercism/ocaml/leap/leap.mli)
+$ (cd _build/default && /Users/jungwookim/.opam/4.11.1/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -bin-annot -I exercism/ocaml/leap/.test.eobjs/byte -I /Users/jungwookim/.opam/4.11.1/lib/base -I /Users/jungwookim/.opam/4.11.1/lib/base/base_internalhash_types -I /Users/jungwookim/.opam/4.11.1/lib/base/caml -I /Users/jungwookim/.opam/4.11.1/lib/base/shadow_stdlib -I /Users/jungwookim/.opam/4.11.1/lib/bytes -I /Users/jungwookim/.opam/4.11.1/lib/oUnit -I /Users/jungwookim/.opam/4.11.1/lib/ounit2 -I /Users/jungwookim/.opam/4.11.1/lib/ounit2/advanced -I /Users/jungwookim/.opam/4.11.1/lib/sexplib0 -I /Users/jungwookim/.opam/4.11.1/lib/stdlib-shims -no-alias-deps -opaque -o exercism/ocaml/leap/.test.eobjs/byte/test.cmo -c -impl exercism/ocaml/leap/test.ml)
+$ (cd _build/default && /Users/jungwookim/.opam/4.11.1/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -I exercism/ocaml/leap/.test.eobjs/byte -I exercism/ocaml/leap/.test.eobjs/native -I /Users/jungwookim/.opam/4.11.1/lib/base -I /Users/jungwookim/.opam/4.11.1/lib/base/base_internalhash_types -I /Users/jungwookim/.opam/4.11.1/lib/base/caml -I /Users/jungwookim/.opam/4.11.1/lib/base/shadow_stdlib -I /Users/jungwookim/.opam/4.11.1/lib/bytes -I /Users/jungwookim/.opam/4.11.1/lib/oUnit -I /Users/jungwookim/.opam/4.11.1/lib/ounit2 -I /Users/jungwookim/.opam/4.11.1/lib/ounit2/advanced -I /Users/jungwookim/.opam/4.11.1/lib/sexplib0 -I /Users/jungwookim/.opam/4.11.1/lib/stdlib-shims -intf-suffix .ml -no-alias-deps -opaque -o exercism/ocaml/leap/.test.eobjs/native/test.cmx -c -impl exercism/ocaml/leap/test.ml)
+$ (cd _build/default && /Users/jungwookim/.opam/4.11.1/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -I exercism/ocaml/leap/.test.eobjs/byte -I exercism/ocaml/leap/.test.eobjs/native -I /Users/jungwookim/.opam/4.11.1/lib/base -I /Users/jungwookim/.opam/4.11.1/lib/base/base_internalhash_types -I /Users/jungwookim/.opam/4.11.1/lib/base/caml -I /Users/jungwookim/.opam/4.11.1/lib/base/shadow_stdlib -I /Users/jungwookim/.opam/4.11.1/lib/bytes -I /Users/jungwookim/.opam/4.11.1/lib/oUnit -I /Users/jungwookim/.opam/4.11.1/lib/ounit2 -I /Users/jungwookim/.opam/4.11.1/lib/ounit2/advanced -I /Users/jungwookim/.opam/4.11.1/lib/sexplib0 -I /Users/jungwookim/.opam/4.11.1/lib/stdlib-shims -intf-suffix .ml -no-alias-deps -opaque -o exercism/ocaml/leap/.test.eobjs/native/leap.cmx -c -impl exercism/ocaml/leap/leap.ml)
+$ (cd _build/default && /Users/jungwookim/.opam/4.11.1/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -warn-error -A -g -o exercism/ocaml/leap/test.exe /Users/jungwookim/.opam/4.11.1/lib/base/base_internalhash_types/base_internalhash_types.cmxa -I /Users/jungwookim/.opam/4.11.1/lib/base/base_internalhash_types /Users/jungwookim/.opam/4.11.1/lib/base/caml/caml.cmxa /Users/jungwookim/.opam/4.11.1/lib/sexplib0/sexplib0.cmxa /Users/jungwookim/.opam/4.11.1/lib/base/shadow_stdlib/shadow_stdlib.cmxa /Users/jungwookim/.opam/4.11.1/lib/base/base.cmxa -I /Users/jungwookim/.opam/4.11.1/lib/base /Users/jungwookim/.opam/4.11.1/lib/ocaml/unix.cmxa -I /Users/jungwookim/.opam/4.11.1/lib/ocaml /Users/jungwookim/.opam/4.11.1/lib/stdlib-shims/stdlib_shims.cmxa /Users/jungwookim/.opam/4.11.1/lib/ounit2/advanced/oUnitAdvanced.cmxa /Users/jungwookim/.opam/4.11.1/lib/ounit2/oUnit.cmxa exercism/ocaml/leap/.test.eobjs/native/leap.cmx exercism/ocaml/leap/.test.eobjs/native/test.cmx)
+$ (cd _build/default/exercism/ocaml/leap && ./test.exe)
+> ......
+> Ran: 6 tests in: 0.11 seconds.
+> OK

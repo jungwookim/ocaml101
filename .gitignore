@@ -1,5 +1,8 @@
 # ocamlbuild working directory
-_build/
+_build
 
 # vscode
 .vscode
+
+# language server
+.lsp

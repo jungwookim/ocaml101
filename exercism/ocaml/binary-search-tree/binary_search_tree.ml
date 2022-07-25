@@ -22,8 +22,7 @@ let right t =
 let rec insert n t =
   match t with
   | Empty -> Node (Empty, n, Empty)
-  | Node (l, v, r) -> if n = v then t
-                      else if n < v then Node (insert n l, v, r)
+  | Node (l, v, r) -> if n <= v then Node (insert n l, v, r)
                       else Node(l, v, insert n r)
 
 let rec to_list t =

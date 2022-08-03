@@ -9,11 +9,9 @@ let rec count_matched_element l e =
   | [] -> 0
   | h :: t -> count_matched_element t e + if h = e then 1 else 0
 
-let hamming_distance n1 n2 = 
-  if List.length n1 = List.length n2 then
-  let equality_list = equality_result n1 n2 in
-  let result = count_matched_element equality_list false in
-  Base.Result.Ok result
-  else if List.length n1 = 0 then Base.Result.Error "left strand must not be empty"
-  else if List.length n2 = 0 then Base.Result.Error "right strand must not be empty"
-  else Base.Result.Error "left and right strands must be of equal length"
+let hamming_distance n1 n2 =
+  match List.length n1, List.length n2 with
+  | (l1, l2) when l1 = l2 -> let equality_list = equality_result n1 n2 in let result = count_matched_element equality_list false in Base.Result.Ok result
+  | (0, _) -> Base.Result.Error "left strand must not be empty"
+  | (_, 0) -> Base.Result.Error "right strand must not be empty"
+  | _ -> Base.Result.Error "left and right strands must be of equal length"

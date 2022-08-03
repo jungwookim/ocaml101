@@ -4,6 +4,6 @@ let take_first_of_string s =
   | _ -> String.sub s 0 1 |> String.uppercase_ascii
 
 let acronym s = 
-  let string_list = Base.String.split_on_chars s ~on:[' '; '_'; '-'] in
-  let first_string_list = List.map take_first_of_string string_list in
-  List.fold_left String.cat "" first_string_list
+  Base.String.split_on_chars s ~on:[' '; '_'; '-']
+  |> List.map take_first_of_string
+  |> List.fold_left String.cat ""
